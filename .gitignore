@@ -6,6 +6,7 @@
 
 # BlueJ files
 *.ctxt
+*.prefs
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -27,5 +28,6 @@ replay_pid*
 /RemoteSystemTempFiles/
 /RemoteSystemTempFiles/*
 /RemoteSystemTempFiles/.setting/
+**/.setting/
 .setting
 .project
