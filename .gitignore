@@ -25,3 +25,7 @@ replay_pid*
 /.metadata/
 /.sonarlint/
 /RemoteSystemTempFiles/
+/RemoteSystemTempFiles/*
+/RemoteSystemTempFiles/.setting/
+.setting
+.project
