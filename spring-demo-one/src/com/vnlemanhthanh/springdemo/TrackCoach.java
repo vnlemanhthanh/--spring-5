@@ -17,4 +17,11 @@ private FortuneService fortuneService;
 		return fortuneService.getFortune();
 	}
 
+	public void doMyStartupStuff() {
+		System.out.println(this + " inside method doMyStartupStuff()");
+	}
+
+	public void doMyCleanupStuffYoYo() {
+		System.out.println(this + " inside method doMyCleanupStuffYoYo()");
+	}
 }
