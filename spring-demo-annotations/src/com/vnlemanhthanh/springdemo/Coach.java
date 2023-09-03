@@ -11,4 +11,11 @@ public interface Coach {
 	 * @return the daily workout
 	 */
 	public String getDailyWorkout();
+
+	/**
+	 * Gets daily fortune.
+	 *
+	 * @return the daily fortune
+	 */
+	public String getDailyFortune();
 }
