@@ -30,7 +30,7 @@ replay_pid*
 /RemoteSystemTempFiles/*
 /RemoteSystemTempFiles/.setting/
 **/.setting/
-.setting
+.setting/
 .project
 *.classpath
 *.checkstyle
