@@ -13,7 +13,7 @@ import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/customer")
-public class CustomerCotroller {
+public class CustomerController {
 
 	@InitBinder
 	public void initBinder(WebDataBinder dataBinder) {
@@ -33,6 +33,8 @@ public class CustomerCotroller {
 			BindingResult theBindingResult) {
 
 		System.out.println("Last name: |" + theCustomer.getLastName() + "|");
+		System.out.println("BindingResult: " + theBindingResult + "\n\n\n");
+
 		if (theBindingResult.hasErrors()) {
 			return "customer-form";
 		} else {
