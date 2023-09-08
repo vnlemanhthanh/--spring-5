@@ -25,8 +25,13 @@
     <div id="container">
       <h3>Save Customer</h3>
       <form:form action="saveCustomer" modelAttribute="customer" method="post">
+        <!-- need to associate this data with customer id -->
+        <!-- <form:hidden path="id"></form:hidden> -->
         <table>
           <tbody>
+            <tr>
+              <td><form:hidden path="id"></form:hidden></td>
+            </tr>
             <tr>
               <td><label for="firstName">First Name:</label></td>
               <td>
@@ -48,6 +53,12 @@
           </tbody>
         </table>
       </form:form>
+      <div style="clear: both;">
+      <p>
+        <a href="${pageContext.request.contextPath}/customer/list">
+          Back to List
+        </a>
+      </p></div>
     </div>
   </body>
 </html>
