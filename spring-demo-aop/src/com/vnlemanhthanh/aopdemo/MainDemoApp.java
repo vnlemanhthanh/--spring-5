@@ -1,6 +1,7 @@
 package com.vnlemanhthanh.aopdemo;
 
 import com.vnlemanhthanh.aopdemo.dao.AccountDAO;
+import com.vnlemanhthanh.aopdemo.dao.MembershipDAO;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class MainDemoApp {
@@ -10,11 +11,11 @@ public class MainDemoApp {
                 new AnnotationConfigApplicationContext(DemoConfig.class);
 
         AccountDAO theAccountDAO = context.getBean("accountDAO", AccountDAO.class);
+        MembershipDAO theMembershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
 
         theAccountDAO.addAccount();
-
-        System.out.println("Again!");
-        theAccountDAO.addAccount();
+        System.out.println("\n");
+        theMembershipDAO.addAccount();
 
         context.close();
     }
