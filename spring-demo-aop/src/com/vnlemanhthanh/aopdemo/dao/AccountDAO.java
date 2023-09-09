@@ -3,14 +3,51 @@ package com.vnlemanhthanh.aopdemo.dao;
 import com.vnlemanhthanh.aopdemo.Account;
 import org.springframework.stereotype.Component;
 
+
+
 @Component
 public class AccountDAO {
 
-    public void addAccount() {
-        System.out.println(this + "\n: DOING MY DB WORK: ADDING AN ACCOUNT()");
-    }
+	private String name;
+	private String serviceCode;
+	
+	public void addAccount(Account theAccount, boolean vipFlag) {
+		
+		System.out.println(getClass() + ": DOING MY DB WORK: ADDING AN ACCOUNT");
+		
+	}
+	
+	public boolean doWork() {
+		
+		System.out.println(getClass() + ": doWork()");
+		return false;
+	}
 
-    public void addAccount(Account theAccount) {
-        System.out.println(this + "\n: DOING MY DB WORK: ADDING AN ACCOUNT(theAccount)");
-    }
+	public String getName() {
+		System.out.println(getClass() + ": in getName()");
+		return name;
+	}
+
+	public void setName(String name) {
+		System.out.println(getClass() + ": in setName()");
+		this.name = name;
+	}
+
+	public String getServiceCode() {
+		System.out.println(getClass() + ": in getServiceCode()");
+		return serviceCode;
+	}
+
+	public void setServiceCode(String serviceCode) {
+		System.out.println(getClass() + ": in setServiceCode()");
+		this.serviceCode = serviceCode;
+	}
+	
+	
+	
 }
+
+
+
+
+

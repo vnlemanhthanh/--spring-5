@@ -4,13 +4,21 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MembershipDAO {
-    public int addAccount() {
-        System.out.println(this + "\n: DOING MY DB WORK: ADDING AN ACCOUNT");
-        return 0;
-    }
 
-    public void addMember() {
-        System.out.println(this + "\n: DOING MY DB WORK: ADDING AN ACCOUNT");
+	public boolean addSillyMember() {
+		
+		System.out.println(getClass() + ": DOING STUFF: ADDING A MEMBERSHIP ACCOUNT");
+		
+		return true;
+	}
 
-    }
+	public void goToSleep() {
+		
+		System.out.println(getClass() + ": I'm going to sleep now...");
+		
+	}
+
 }
+
+
+
