@@ -15,7 +15,13 @@ public class FunRestController {
 
     @GetMapping("/workout")
     public String getDailyWorkout() {
+
         return "Run a hard 5k!";
+    }
+
+    @GetMapping({"/fortune", "/fortune.html"})
+    public String getDailyFortune() {
+        return "Daily Fortune";
     }
 
 }
