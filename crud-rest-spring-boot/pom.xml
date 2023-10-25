@@ -15,8 +15,8 @@
     <name>crud-rest-spring-boot</name>
     <description>crud-rest-spring-boot</description>
     <properties>
-        <java.version>1.8</java.version>
-        <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+        <java.version>17</java.version>
+<!--        <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>-->
     </properties>
     <dependencies>
         <dependency>
@@ -35,8 +35,9 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.19</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
