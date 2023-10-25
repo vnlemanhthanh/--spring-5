@@ -20,7 +20,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     @Transactional
     public List<Employee> findAll() {
-        System.out.println(employeeDAO.findAll().get(0));
         return employeeDAO.findAll();
     }
 
