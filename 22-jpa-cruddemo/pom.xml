@@ -10,7 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>crud-rest-spring-boot</artifactId>
+    <artifactId>22-jpa-cruddemo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>crud-rest-spring-boot</name>
     <description>crud-rest-spring-boot</description>

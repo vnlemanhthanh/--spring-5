@@ -3,10 +3,7 @@ package com.vnlemanhthanh.crudrestspringboot.rest;
 import com.vnlemanhthanh.crudrestspringboot.entity.Employee;
 import com.vnlemanhthanh.crudrestspringboot.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -33,6 +30,62 @@ public class EmployeeRestController {
             throw new RuntimeException();
         }
         return theEmployee;
-        
     }
+
+    @PostMapping("/employees")
+    public Employee addEmployee(@RequestBody Employee theEmployee) {
+        theEmployee.setId(0);
+        employeeService.save(theEmployee);
+        return theEmployee;
+    }
+
+    @PutMapping("/employees")
+    public Employee updateEmployee(@RequestBody Employee theEmployee) {
+        employeeService.save(theEmployee);
+        return theEmployee;
+    }
+
+    @DeleteMapping("/employees/{theId}")
+    public String deleteEmployee(@PathVariable int theId) {
+        Employee tempEmployee = employeeService.findById(theId);
+
+        if (tempEmployee == null) {
+            throw new RuntimeException("not found");
+        }
+
+        employeeService.deleteById(theId);
+        return "Deleted employee id - " + theId;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
